@@ -1,7 +1,10 @@
 const express = require('express');
+const { ApolloServer } = require('apollp-server-express');
 const path = require('path');
+
+const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
-const routes = require('./routes');
+const routes = require('./routes'); // TODO: delete?
 
 const app = express();
 const PORT = process.env.PORT || 3001;
